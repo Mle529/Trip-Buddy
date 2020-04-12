@@ -1,0 +1,102 @@
+body{
+    background-image: url("https://cdn.shopify.com/s/files/1/0011/6208/4407/products/Art_3079_2000x.jpg?v=1566392227");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+p{
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+}
+
+label {
+    margin-bottom: 0px !important;
+}
+
+.mainHeader {
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    background-color: rgb(255, 217, 1);
+    font: black;
+}
+
+.navbar-brand {
+    font-size: 30px !important;
+}
+
+.card {
+    margin-top: 30px;
+    background-color: rgb(126, 123, 123, 0.75) !important;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+#submitButton {
+    text-align: center;
+    margin: 25px 25px 25px 15px;
+    background-color: rgb(255, 217, 1);
+    border: solid 1px rgb(49, 48, 48, 0.75);
+    color: black;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px lightgrey solid;
+}
+
+.media {
+    background-color: white;
+    border: 1px solid rgb(211, 209, 209);
+    border-radius: 10px;
+}
+
+.businessHeader{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 3px;
+}
+
+.businessInfo{
+    color: black;
+    font-size: 15px;
+    margin-left: 10px;
+    padding-left: 3px;
+}
+
+#forecastHead {
+    padding: 5px;
+}
+
+#forecast {
+    font-size: 15px;
+    margin-right: 10px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.forecastData {
+    color: black;
+    margin: 0;
+    padding: 5px;
+}
+
+.days {
+    border: 1px rgb(211, 209, 209) solid;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+#forecastImg {
+    height: 75px;
+    width: 75px;
+}

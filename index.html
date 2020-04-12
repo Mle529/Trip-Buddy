@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trip Buddy</title>
+
+    <!--CSS and Style Link-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+
+    <!--Google font style links-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!--Header-->
+    <div class="mainHeader">
+        <nav class="navbar navbar-light">
+            <span class="navbar-brand mb-0 h1 ">Trip Buddy <i class="fas fa-car-side fa-xs"></i></span>
+        </nav>
+    </div>
+
+    <div class="container">
+        <!--Card Body-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <!--Starting Location Input Row-->
+                        <div class="row">
+                            <div class=" col-sm-5">
+                                <p>Starting Location</p>
+                                <!--Starting location Input-->
+                                <input type="search" id="startAddress" placeholder="Leaving from?" />
+                            </div>
+
+                            <!--Destination Input Row-->
+                            <div class="col-sm-5">
+                                <p>Destination Location</p>
+                                <!--Destination Input-->
+                                <input type="search" id="endAddress" placeholder="Going to?" />
+                            </div>
+
+                        </div>
+
+                        <!--Activity and Restaruant choices-->
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <!--Input for number of restaurants you want to generate-->
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">
+                                        <p>Restaurants</p>
+                                    </label>
+                                    <select class="form-control" id="numRestaurants">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <!--Input for number of activities you want to generate-->
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">
+                                        <p>Activities</p>
+                                    </label>
+                                    <select class="form-control" id="numActivities">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Submit button-->
+                        <div class="row">
+                            <button type="button" class="btn btn-primary" id="submitButton">Search</i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-0" id="directions"></div>
+
+        <div class="row m-1" id="forecastHead"></div>
+        <div class="row m-0 justify-content-center" id="forecast"></div>
+
+        <!--Search Results-->
+        <div class="row" id="results">
+            <div class="col-sm-6" id="restaurants"></div>
+            <div class="col-sm-6" id="activities"></div>
+        </div>
+
+    </div>
+
+
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.17.1"></script>
+    <script>
+        var startAddress = places({
+            appId: 'pl7E3UZTOWW0',
+            apiKey: '6a40a5221c1febca1b1d96bd6ef8e1c4',
+            container: document.querySelector('#startAddress')
+        });
+
+        var endAddress = places({
+            appId: 'pl7E3UZTOWW0',
+            apiKey: '6a40a5221c1febca1b1d96bd6ef8e1c4',
+            container: document.querySelector('#endAddress')
+        });
+    </script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
